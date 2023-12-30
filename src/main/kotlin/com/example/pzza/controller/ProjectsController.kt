@@ -6,6 +6,7 @@ import com.example.pzza.models.ReadApplicantDTO
 import com.example.pzza.models.http.ModifiedProjectRequest
 import com.example.pzza.models.http.ProjectsResponse
 import com.example.pzza.service.ProjectsService
+import jakarta.validation.Valid
 import jakarta.validation.constraints.Min
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
@@ -93,6 +94,7 @@ class ProjectsController {
         token:String,
         @PathVariable(name="id")
         projectId:Int,
+        @Valid
         @RequestBody
         alterApplicantDTO: AlterApplicantDTO
     ): ResponseEntity<String> {

@@ -73,8 +73,9 @@ data class CreateProjectDTO(
             this.designRecruitment = this@CreateProjectDTO.designRecruitment
             this.chatUrl = this@CreateProjectDTO.chatUrl
             this.createdAt = this@CreateProjectDTO.createdAt
-            this.projectStatus = this@CreateProjectDTO.projectStatus
+            this.projectStatus = "모집중"
             this.guideLine = this@CreateProjectDTO.guideLine
         }
     }
 }
+

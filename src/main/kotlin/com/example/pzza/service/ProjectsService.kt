@@ -7,7 +7,6 @@ import com.example.pzza.database.User
 import com.example.pzza.models.*
 import com.example.pzza.models.http.ModifiedProjectRequest
 import com.example.pzza.models.http.ProjectRequest
-import com.example.pzza.models.http.ProjectResponse
 import com.example.pzza.models.http.ProjectsResponse
 import com.example.pzza.repository.*
 import org.springframework.beans.factory.annotation.Autowired
@@ -62,11 +61,8 @@ class ProjectsService {
         var createdAt:String = LocalDateTime.now().format(
             DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))
 
-        var status = "모집중"
-
         val result = projectRequest.toProjectDTO().apply{
             this.writer = writer
-            this.projectStatus = status
             this.createdAt = createdAt
             this.guideLine = when{
                 period==10 -> "Guide1"
