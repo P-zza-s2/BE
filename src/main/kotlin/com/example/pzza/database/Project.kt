@@ -16,7 +16,7 @@ class Project {
 
     @ManyToOne
     @JoinColumn(name = "writer", referencedColumnName = "no", nullable = false)
-    var writer`:User?=null
+    var writer:User?=null
 
     @Column(length = 20, nullable = false)
     var title:String?=null
