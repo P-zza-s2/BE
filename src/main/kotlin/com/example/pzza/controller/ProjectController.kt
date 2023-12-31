@@ -1,9 +1,9 @@
 package com.example.pzza.controller
 
 import com.example.pzza.models.http.ProjectRequest
-import com.example.pzza.models.http.ProjectResponse
 import com.example.pzza.models.http.ProjectsResponse
 import com.example.pzza.service.ProjectsService
+import jakarta.validation.Valid
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
@@ -37,6 +37,7 @@ class ProjectController {
         @RequestHeader(name = "ACCESS_KEY")
         token:String,
 
+        @Valid
         @RequestBody
         projectRequest: ProjectRequest
     ): ResponseEntity<String> {

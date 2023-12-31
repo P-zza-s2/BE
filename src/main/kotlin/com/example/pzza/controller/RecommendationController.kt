@@ -1,6 +1,7 @@
 package com.example.pzza.controller
 
 import com.example.pzza.service.ClovarService
+import jakarta.validation.Valid
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
@@ -20,7 +21,7 @@ class RecommendationController {
     fun getSubjectController(
     ):ResponseEntity<String>{
         return clovarService.getSubject().run{
-            ResponseEntity.ok().body(this)
+             ResponseEntity.ok().body(this)
         }
 
 
